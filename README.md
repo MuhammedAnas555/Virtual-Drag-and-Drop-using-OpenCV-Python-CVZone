@@ -1,29 +1,20 @@
 # Virtual Drag and Drop using Hand Tracking in Python
-
 This project implements a **virtual drag-and-drop system** using **OpenCV** and **CVZone**. By leveraging real-time **hand tracking** through a webcam, users can move rectangles on the screen by using simple hand gestures. This project is an excellent example of how computer vision can be used for interactive applications.
-
 ## Features
-
 - **Real-time hand tracking**: Detect and track hand movements via a webcam using CVZone's `HandDetector`.
 - **Drag-and-drop functionality**: Move rectangles by "gripping" with hand gestures (pinching index and middle fingers).
 - **Multiple draggable rectangles**: Interact with several rectangles simultaneously.
 - **Visual effects**: Both solid and transparent rectangle visuals provide interactive feedback.
-
-## Requirements
-
+# Requirements
 - **Python 3.x**
 - **OpenCV**: `pip install opencv-python`
 - **CVZone**: `pip install cvzone`
 - **Numpy**: `pip install numpy`
-
 ## How It Works
-
 1. **Hand Detection**: The program uses CVZone’s `HandDetector` to track hand movements in real-time.
 2. **Interaction Logic**: If the distance between the index and middle finger is less than a threshold, it is considered a "grip," and the rectangle follows the hand’s movements.
 3. **Drawing Rectangles**: Solid and semi-transparent rectangles are drawn to give the user visual feedback while interacting with them.
-
 ## Code Overview
-
 - **DragRect Class**: Defines the rectangle’s properties (color, size, position) and updates its position when dragged.
 - **Hand Tracking**: Captures hand landmarks and calculates the distance between fingers to trigger drag-and-drop actions.
 - **Main Loop**: Continuously detects hand gestures and updates the position of rectangles accordingly.
